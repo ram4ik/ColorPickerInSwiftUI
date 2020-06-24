@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var color: Color = Color.green
+    
     var body: some View {
-        Text("Hello, world!").padding()
+        VStack {
+            ColorPicker("Select a color", selection: self.$color)
+                .padding(.all, 10)
+        }.padding(.all, 10)
     }
 }
 
